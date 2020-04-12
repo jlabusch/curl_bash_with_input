@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-echo "Repurposing stderr as stdin"
-exec 0<$(realpath /proc/self/fd/2)
+if [ "$1" = "--fix-stdin" ]; then
+    echo "Repurposing stderr as stdin"
+    exec 0<$(realpath /proc/self/fd/2)
+fi
 
 echo -n "Enter some input: "
 read X

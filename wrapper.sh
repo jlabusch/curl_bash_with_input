@@ -6,4 +6,4 @@ curl -sL https://raw.githubusercontent.com/jlabusch/curl_bash_with_input/master/
 chmod 755 ${TEMP}
 
 echo "Executing script.sh"
-exec ${TEMP}
+exec ${TEMP} --fix-stdin
