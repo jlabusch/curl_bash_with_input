@@ -7,6 +7,7 @@ fi
 
 echo -n "Enter some input: "
 read X
+# example comment
 echo "You wrote \"$X\""
 
 echo "Cleaning up"
