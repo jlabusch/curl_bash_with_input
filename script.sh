@@ -10,5 +10,7 @@ read X
 # example comment
 echo "You wrote \"$X\""
 
-echo "Cleaning up"
-rm -fv $0
+if [ "$1" = "--fix-stdin" ]; then
+    echo "Cleaning up"
+    rm -fv $0
+fi
